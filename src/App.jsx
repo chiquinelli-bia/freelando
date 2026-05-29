@@ -1,14 +1,13 @@
 import { ProvedorTema } from "./componentes/themeProvider";
 import { Card } from "./componentes/card";
 import Estilos from "./componentes/estilosGlobais/estilos";
-import Header from "./componentes/header";
 import { Tipografia } from "./componentes/tipografia";
+import { CampoTexto } from "./componentes/campoTexto";
 
 function App() {
   return (
     <ProvedorTema>
       <Estilos />
-      <Header />
       <Card>
         <Tipografia variante="h1" componente="h1">
           Crie seu Cadastro.
@@ -18,6 +17,9 @@ function App() {
           freelancers. Em seguida, você poderá dar mais detalhes sobre suas
           demandas e sobre sua forma de trabalho.{" "}
         </Tipografia>
+        <form>
+          <CampoTexto titulo="Nome Completo"></CampoTexto>
+        </form>
       </Card>
     </ProvedorTema>
   );
