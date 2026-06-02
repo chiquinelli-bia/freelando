@@ -5,6 +5,7 @@ import { Tipografia } from "./componentes/tipografia";
 import { CampoTexto } from "./componentes/campoTexto";
 import { Botao } from "./componentes/button";
 import { Col, Container, Row } from "react-grid-system";
+import Footer from "./componentes/rodape";
 
 function App() {
   return (
@@ -62,6 +63,7 @@ function App() {
           </Col>
         </Row>
       </Container>
+      <Footer />
     </ProvedorTema>
   );
 }
