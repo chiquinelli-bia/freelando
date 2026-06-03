@@ -1,5 +1,7 @@
 import styled from "@emotion/styled";
-import logo from "../../assets/LogoCinza.png";
+import { Col, Container, Row } from "react-grid-system";
+import { FreelandoLogo } from "../icones/logo";
+import { Link } from "../link";
 
 export const Cabecalho = styled.header`
   background: ${(props) => props.theme.cores.primarias.a};
@@ -10,7 +12,16 @@ export const Cabecalho = styled.header`
 export default function Header() {
   return (
     <Cabecalho>
-      <img src={logo} alt="logo do freelando" />
+      <Container>
+        <Row>
+          <Col align="center">
+            <FreelandoLogo />
+          </Col>
+          <Col style={{ textAlign: "right" }}>
+            <Link>Login</Link>
+          </Col>
+        </Row>
+      </Container>
     </Cabecalho>
   );
 }

@@ -6,12 +6,14 @@ import { CampoTexto } from "./componentes/campoTexto";
 import { Botao } from "./componentes/button";
 import { Col, Container, Row } from "react-grid-system";
 import Footer from "./componentes/rodape";
+import Header from "./componentes/header";
 
 function App() {
   return (
     <ProvedorTema>
       <Estilos />
-      <Container>
+      <Header />
+      <Container style={{ margin: "80px auto" }}>
         <Row justify="center">
           <Col lg={6} md={8} sm={12}>
             <Card>
