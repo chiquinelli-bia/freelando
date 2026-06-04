@@ -4,7 +4,7 @@ const LabelEstilizada = styled.label`
   display: block;
   width: 100%;
   box-sizing: border-box;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 20px;
   line-height: 24px;
 `;
@@ -19,7 +19,7 @@ const InputEstilizado = styled.input`
   border-color: ${(props) => props.theme.cores.neutras.a};
   border-radius: ${(props) => props.theme.espacamentos.s};
   height: 40px;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 14px;
   line-height: 17px;
 `;
