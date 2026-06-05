@@ -1,76 +1,69 @@
 # Freelando
 
-![Thumbnail do projeto. O título é “Freelando • Componentes customizados” e o Subtítulo é “adaptado por Bianca Chiquinelli.”](thumb.png)
+![Thumbnail do projeto. O título é “Freelando • Componentes customizados” e o subtítulo é “adaptado por Bianca Chiquinelli”.](thumb.png)
 
-O Freelando é uma startup fictícia desenvolvida durante a formação de React da Alura. O projeto simula um MVP em evolução, servindo como ambiente para aplicar conceitos de componentização, gerenciamento de estado, estilização escalável e construção de interfaces reutilizáveis.
-
-O foco desta implementação foi estruturar componentes desacoplados, evoluir a organização visual da aplicação e desenvolver interações mais sofisticadas utilizando React e Emotion
-
-![Imagem da aplicação da Jornada Milhas](jornada-milhas.png)
+O Freelando é uma startup fictícia em formato de MVP desenvolvida com React. O projeto foi utilizado para aprofundar conceitos de componentização, gerenciamento de estado, estilização com Emotion e construção de interfaces reutilizáveis.
 
 ## Tecnologias
 
 - React
+- JavaScript
 - Emotion
 - React Grid System
-- JavaScript
 - Vite
 - Git e GitHub
 - Figma
 
 ## Principais implementações
 
-- Estruturação da aplicação com componentes reutilizáveis e desacoplados.
-- Configuração de design system utilizando ThemeProvider para centralização de cores, tipografia e espaçamentos.
+- Estruturação da interface com componentes reutilizáveis.
+- Criação de Design System utilizando ThemeProvider.
+- Centralização de cores, tipografia e espaçamentos.
+- Desenvolvimento de componentes estilizados com Emotion.
 - Construção de layouts responsivos com React Grid System.
-- Desenvolvimento de componentes de interface reutilizáveis utilizando Emotion.
 - Implementação de formulário baseado em composição de componentes.
-- Organização da estilização por responsabilidade, separando comportamento e apresentação.
+- Gerenciamento de estado local para controle de interações da interface.
 
-## 💡 Destaques do projeto
+## 💡 Destaque técnico
 
-_Lista suspensa customizada_
+### Lista suspensa customizada
 
-Desenvolvimento de um componente de seleção totalmente customizado, sem dependência de bibliotecas externas.
+Desenvolvimento de um componente de seleção sem dependência de bibliotecas externas, com suporte à navegação por teclado e controle de foco.
 
-### Funcionalidades implementadas:
+**Recursos implementados:**
 
 - Controle de abertura e fechamento através de estado local.
-- Navegação por teclado utilizando `ArrowUp` e `ArrowDown`.
-- Seleção de opções através da tecla `Enter`.
+- Navegação entre opções utilizando `ArrowUp` e `ArrowDown`.
+- Seleção de itens através da tecla `Enter`.
 - Fechamento do componente com `Escape` e `Tab`.
 - Controle de foco entre os itens da lista.
 - Atualização dinâmica da opção selecionada.
-- Feedback visual de foco e interação.
-- Estilização condicional baseada em estado.
+- Feedback visual para foco e interação.
+- Estilização condicional baseada no estado do componente.
 
-### Aspectos técnicos aplicados:
+**Conceitos aplicados:**
 
-- Gerenciamento de múltiplos estados com React Hooks.
-- Atualizações de estado baseadas no valor anterior (functional updates).
-- Tratamento de eventos de teclado para melhorar acessibilidade e experiência de uso.
-- Renderização condicional de componentes.
-- Comunicação entre componentes através de propriedades.
-- Utilização de estilos dinâmicos com Emotion para refletir mudanças de estado na interface.
+- React Hooks (`useState`).
+- Functional Updates para atualização segura de estado.
+- Tratamento de eventos de teclado.
+- Renderização condicional.
+- Comunicação entre componentes via props.
+- Estilos dinâmicos com Emotion.
+- Práticas de acessibilidade voltadas para navegação por teclado.
 
-## Como Ter Acesso ao Projeto
+## Acesso ao projeto
 
-- **Versão online**: [Clique aqui](https://jornada-milhas-delta.vercel.app/)
-- **Rodar localmente**:
-  Clone o repositório e instale as dependências:
+**Versão online:**
+https://freelando-two.vercel.app/
+
+### Executar localmente
 
 ```bash
+git clone <https://github.com/chiquinelli-bia/freelando>
+
 cd freelando
-```
 
-5. Instale as dependências usando o npm:
-
-```bash
 npm install
-```
 
-6. Inicie o projeto localmente:
-
-```bash
 npm run dev
 ```
