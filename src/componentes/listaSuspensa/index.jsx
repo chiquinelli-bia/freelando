@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { useState } from "react";
-import { ItemListaEstilizado } from "./itemlista";
+import { ItemListaEstilizado } from "./itemLista";
 import { ListaEstilizado } from "./ListaSuspensa";
 
 const LabelEstilizada = styled.label`
