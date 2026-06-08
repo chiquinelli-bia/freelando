@@ -16,9 +16,10 @@ const LinkSecundario = styled.a`
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+  text-decoration: none;
   color: ${(props) => props.theme.cores.primarias.b};
   &:hover {
-    font-weight: bold;
+    font-weight: 600;
     border-bottom: 1px solid ${(props) => props.theme.cores.primarias.b};
   }
 `;
