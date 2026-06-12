@@ -43,17 +43,18 @@ const InputEscondido = styled.input`
     border-color: ${(props) => props.theme.cores.focus};
   }
 `;
-export const Radio = ({ valor, label, checked, onClick }) => {
+export const Radio = ({ valor, label, checked, onChange }) => {
   return (
     <>
       <InputEscondido
         type="radio"
-        valor={valor}
+        value={valor}
         checked={checked}
-        onChange={onClick}
+        onChange={onChange}
         id={`radio-customizado-${valor}`}
       />
-      <LabelEstilizada htmlFor={`radio-customizado=${valor}`} checked={checked}>
+
+      <LabelEstilizada htmlFor={`radio-customizado-${valor}`} checked={checked}>
         {label}
       </LabelEstilizada>
     </>

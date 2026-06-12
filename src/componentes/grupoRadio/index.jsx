@@ -9,7 +9,7 @@ export const GrupoRadio = ({ opcoes, valor, onChange }) => {
           valor={option.valor}
           label={option.label}
           checked={option.valor === valor}
-          onlick={() => onChange(valor)}
+          onChange={() => onChange(option.valor)}
         />
       ))}
     </div>
