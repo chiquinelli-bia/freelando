@@ -1,7 +1,4 @@
-/* eslint-disable no-unused-vars */
 import { Col, Row } from "react-grid-system";
-import cliente from "../../assets/cliente.png";
-import freela from "../../assets/freela.png";
 import { Tipografia } from "../../componentes/tipografia";
 import { GrupoRadio } from "../../componentes/grupoRadio";
 import { useState } from "react";

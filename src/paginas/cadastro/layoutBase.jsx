@@ -4,7 +4,7 @@ import { Card } from "../../componentes/card";
 
 export const LayoutBaseCadastro = () => {
   return (
-    <Row justify="center">
+    <Row justify="center" style={{ marginRight: "0" }}>
       <Col
         xxx={6}
         xxl={6}
