@@ -6,6 +6,7 @@ import { Col, Row } from "react-grid-system";
 import "../../componentes/rodape";
 import "../../componentes/header";
 import { ListaSuspensa } from "../../componentes/listaSuspensa";
+import { Link } from "react-router-dom";
 
 const estadosBrasileiros = [
   { text: "Acre", value: "AC" },
@@ -78,10 +79,14 @@ function DadosPessoais() {
           </Row>
           <Row>
             <Col lg={6} md={6} sm={6} style={{ textAlign: "left" }}>
-              <Botao variante="secundaria">Anterior</Botao>
+              <Link to="/cadastro/interesses">
+                <Botao variante="secundaria">Anterior</Botao>
+              </Link>
             </Col>
             <Col lg={6} md={6} sm={6} style={{ textAlign: "right" }}>
-              <Botao>Próxima</Botao>
+              <Link to="/cadastro/concluido">
+                <Botao>Próxima</Botao>
+              </Link>
             </Col>
           </Row>
         </form>
