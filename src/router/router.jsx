@@ -4,6 +4,7 @@ import { LayoutBaseCadastro } from "../paginas/cadastro/layoutBase";
 import { SelecaoCliente } from "../paginas/cadastro/selecaoCliente";
 import { Interesses } from "../paginas/cadastro/interesses";
 import DadosPessoais from "../paginas/cadastro/dadosPessoais";
+import { Concluido } from "../paginas/cadastro/concluido";
 
 export const router = createBrowserRouter([
   {
@@ -28,7 +29,7 @@ export const router = createBrowserRouter([
           },
           {
             path: "concluido",
-            element: <h1>Concluído</h1>,
+            element: <Concluido />,
           },
         ],
       },
