@@ -48,7 +48,13 @@ function DadosPessoais() {
     setEmail,
     setSenha,
     setSenhaConfirmada,
+    submeterForm,
   } = useCadastroUsuarioContext();
+
+  const finalizarCadastro = (evento) => {
+    evento.preventDefault();
+    submeterForm();
+  };
   return (
     <>
       <div style={{ textAlign: "center" }}>
@@ -60,7 +66,7 @@ function DadosPessoais() {
           freelancers. Em seguida, você poderá dar mais detalhes sobre suas
           demandas e sobre sua forma de trabalho.{" "}
         </Tipografia>
-        <form>
+        <form onSubmit={finalizarCadastro}>
           <Row>
             <Col>
               <CampoTexto
@@ -122,9 +128,7 @@ function DadosPessoais() {
               </Link>
             </Col>
             <Col lg={6} md={6} sm={6} style={{ textAlign: "right" }}>
-              <Link to="/cadastro/concluido">
-                <Botao>Próxima</Botao>
-              </Link>
+              <Botao>Próxima</Botao>
             </Col>
           </Row>
         </form>

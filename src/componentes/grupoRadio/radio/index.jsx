@@ -48,6 +48,7 @@ export const Radio = ({ valor, label, checked, onChange }) => {
     <>
       <InputEscondido
         type="radio"
+        name="interesses"
         value={valor}
         checked={checked}
         onChange={onChange}
