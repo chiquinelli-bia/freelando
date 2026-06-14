@@ -4,8 +4,10 @@ import freela from "../../assets/freela.png";
 import { Tipografia } from "../../componentes/tipografia";
 import { Link } from "../../componentes/link";
 import { Link as RouterLink } from "react-router-dom";
+import { useCadastroUsuarioContext } from "../../contexto/cadastroUsuario";
 
 export const SelecaoCliente = () => {
+  const { setPerfil } = useCadastroUsuarioContext();
   return (
     <div style={{ textAlign: "center" }}>
       <Tipografia variante="h1" componente="h1">
@@ -16,7 +18,7 @@ export const SelecaoCliente = () => {
       </Tipografia>
       <Row>
         <Col md={6} sm={12}>
-          <RouterLink to="interesses">
+          <RouterLink to="interesses" onClick={() => setPerfil("cliente")}>
             <img src={cliente} alt="" />
             <Tipografia variante="body" componente="body">
               Sou cliente e preciso de um freela!

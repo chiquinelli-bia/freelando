@@ -7,6 +7,7 @@ import "../../componentes/rodape";
 import "../../componentes/header";
 import { ListaSuspensa } from "../../componentes/listaSuspensa";
 import { Link } from "react-router-dom";
+import { useCadastroUsuarioContext } from "../../contexto/cadastroUsuario";
 
 const estadosBrasileiros = [
   { text: "Acre", value: "AC" },
@@ -39,6 +40,15 @@ const estadosBrasileiros = [
 ];
 
 function DadosPessoais() {
+  const {
+    usuario,
+    setNomeCompleto,
+    setCidade,
+    setUf,
+    setEmail,
+    setSenha,
+    setSenhaConfirmada,
+  } = useCadastroUsuarioContext();
   return (
     <>
       <div style={{ textAlign: "center" }}>
@@ -53,28 +63,56 @@ function DadosPessoais() {
         <form>
           <Row>
             <Col>
-              <CampoTexto titulo="Nome Completo"></CampoTexto>
+              <CampoTexto
+                titulo="Nome Completo"
+                valor={usuario.nomeCompleto}
+                onChange={setNomeCompleto}
+              ></CampoTexto>
             </Col>
           </Row>
           <Row>
             <Col lg={4} md={4} sm={4}>
-              <ListaSuspensa titulo="Estado" opcoes={estadosBrasileiros} />
+              <ListaSuspensa
+                titulo="Estado"
+                opcoes={estadosBrasileiros}
+                valor={usuario.uf}
+                onChange={setUf}
+              />
             </Col>
             <Col lg={8} md={8} sm={8}>
-              <CampoTexto titulo="Cidade"></CampoTexto>
+              <CampoTexto
+                titulo="Cidade"
+                valor={usuario.cidade}
+                onChange={setCidade}
+              ></CampoTexto>
             </Col>
           </Row>
           <Row>
             <Col>
-              <CampoTexto titulo="E-mail"></CampoTexto>
+              <CampoTexto
+                titulo="E-mail"
+                tipo="email"
+                valor={usuario.email}
+                onChange={setEmail}
+              ></CampoTexto>
             </Col>
           </Row>
           <Row>
             <Col lg={6} md={6} sm={6}>
-              <CampoTexto titulo="Senha"></CampoTexto>
+              <CampoTexto
+                titulo="Senha"
+                tipo="password"
+                valor={usuario.senha}
+                onChange={setSenha}
+              ></CampoTexto>
             </Col>
             <Col lg={6} md={6} sm={6}>
-              <CampoTexto titulo="Repita a Senha"></CampoTexto>
+              <CampoTexto
+                titulo="Repita a Senha"
+                tipo="password"
+                valor={usuario.senhaConfirmada}
+                onChange={setSenhaConfirmada}
+              ></CampoTexto>
             </Col>
           </Row>
           <Row>
