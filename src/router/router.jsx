@@ -12,7 +12,7 @@ export const router = createBrowserRouter([
     element: <LayoutBase />,
     children: [
       {
-        path: "cadastro",
+        path: "",
         element: <LayoutBaseCadastro />,
         children: [
           {
