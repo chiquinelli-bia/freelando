@@ -1,13 +1,14 @@
 # Freelando
 
-![Thumbnail do projeto. O título é “Freelando • Componentes customizados” e o subtítulo é “adaptado por Bianca Chiquinelli”.](thumb.png)
+![Thumbnail do projeto. O título é “Freelando — fluxo de cadastro com React Router e Context API.” e o subtítulo é “adaptado por Bianca Chiquinelli”.](thumb.png)
 
-O Freelando é uma startup fictícia em formato de MVP desenvolvida com React. O projeto foi utilizado para aprofundar conceitos de componentização, gerenciamento de estado, estilização com Emotion e construção de interfaces reutilizáveis.
+O Freelando é uma aplicação fictícia desenvolvida com React. O projeto foi utilizado para explorar conceitos de componentização, gerenciamento de estado, roteamento de aplicações e construção de interfaces reutilizáveis.
 
 ## Tecnologias
 
-- React
+- React e React Router DOM
 - JavaScript
+- Context API
 - Emotion
 - React Grid System
 - Vite
@@ -16,45 +17,33 @@ O Freelando é uma startup fictícia em formato de MVP desenvolvida com React. O
 
 ## Principais implementações
 
-- Estruturação da interface com componentes reutilizáveis.
-- Criação de Design System utilizando ThemeProvider.
-- Centralização de cores, tipografia e espaçamentos.
-- Desenvolvimento de componentes estilizados com Emotion.
+- Estruturação da aplicação com React Router DOM, organizando o fluxo de navegação em múltiplas páginas.
+- Criação de layouts compartilhados para reutilização de estrutura entre diferentes rotas.
+- Implementação de um fluxo de cadastro multietapas. incluindo páginas de interesses, dados pessoais e conclusão.
+- Centralização do estado do formulário utilizando Context API, permitindo o compartilhamento de dados entre as etapas sem prop drilling.
+- Integração do provider ao fluxo de cadastro e implementação da lógica de submissão do formulário.
+- Estruturação da interface com componentes reutilizáveis e estilizados com Emotion.
+- Criação de um Design System utilizando ThemeProvider, centralizando cores, tipografia e espaçamentos.
 - Construção de layouts responsivos com React Grid System.
-- Implementação de formulário baseado em composição de componentes.
-- Gerenciamento de estado local para controle de interações da interface.
 
 ## 💡 Destaque técnico
 
-### Lista suspensa customizada
+### Fluxo de cadastro com React Router DOM e Context API
 
-Desenvolvimento de um componente de seleção sem dependência de bibliotecas externas, com suporte à navegação por teclado e controle de foco.
+Desenvolvimento de um fluxo de cadastro multietapas utilizando roteamento e gerenciamento global de estado, mantendo os dados sincronizados durante toda a navegação da aplicação.
 
-**Recursos implementados:**
+_Recursos implementados:_
 
-- Controle de abertura e fechamento através de estado local.
-- Navegação entre opções utilizando `ArrowUp` e `ArrowDown`.
-- Seleção de itens através da tecla `Enter`.
-- Fechamento do componente com `Escape` e `Tab`.
-- Controle de foco entre os itens da lista.
-- Atualização dinâmica da opção selecionada.
-- Feedback visual para foco e interação.
-- Estilização condicional baseada no estado do componente.
-
-**Conceitos aplicados:**
-
-- React Hooks (`useState`).
-- Functional Updates para atualização segura de estado.
-- Tratamento de eventos de teclado.
-- Renderização condicional.
-- Comunicação entre componentes via props.
-- Estilos dinâmicos com Emotion.
-- Práticas de acessibilidade voltadas para navegação por teclado.
+- Organização do cadastro em rotas independentes.
+- Compartilhamento de estado entre páginas por meio da Context API.
+- Providers integrados à estrutura de layouts da aplicação.
+- Navegação entre etapas com preservação dos dados preenchidos.
+- Validação e ajustes do fluxo de roteamento para garantir consistência na experiência do usuário.
+- Refatoração dos componentes de formulário para consumir o contexto global.
 
 ## Acesso ao projeto
 
-**Versão online:**
-https://freelando-two.vercel.app/
+**Versão online:** <https://freelando-two.vercel.app/>
 
 ### Executar localmente
 
