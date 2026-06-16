@@ -3,7 +3,7 @@ import { Col, Container, Row } from "react-grid-system";
 import { FreelandoLogo } from "../icones/logo";
 import { Link } from "../link";
 
-export const Cabecalho = styled.header`
+const Cabecalho = styled.header`
   background: ${(props) => props.theme.cores.primarias.a};
   padding: ${(props) => props.theme.espacamentos.xl};
   color: ${(props) => props.theme.cores.branco};
