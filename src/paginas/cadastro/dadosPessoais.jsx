@@ -8,6 +8,7 @@ import "../../componentes/header";
 import { ListaSuspensa } from "../../componentes/listaSuspensa";
 import { Link } from "react-router-dom";
 import { useCadastroUsuarioContext } from "../../contexto/cadastroUsuario";
+import { useEffect } from "react";
 
 const estadosBrasileiros = [
   { text: "Acre", value: "AC" },
@@ -49,12 +50,17 @@ function DadosPessoais() {
     setSenha,
     setSenhaConfirmada,
     submeterForm,
+    dadosSelecionados,
+    navegar,
   } = useCadastroUsuarioContext();
 
   const finalizarCadastro = (evento) => {
     evento.preventDefault();
     submeterForm();
   };
+  useEffect(() => {
+    dadosSelecionados();
+  }, [navegar, dadosSelecionados]);
   return (
     <>
       <div style={{ textAlign: "center" }}>
@@ -123,7 +129,7 @@ function DadosPessoais() {
           </Row>
           <Row>
             <Col lg={6} md={6} sm={6} style={{ textAlign: "left" }}>
-              <Link to="/cadastro/interesses">
+              <Link to="/interesses">
                 <Botao variante="secundaria">Anterior</Botao>
               </Link>
             </Col>

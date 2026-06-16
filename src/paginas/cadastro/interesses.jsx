@@ -4,6 +4,7 @@ import { GrupoRadio } from "../../componentes/grupoRadio";
 import { Botao } from "../../componentes/button";
 import { Link } from "react-router-dom";
 import { useCadastroUsuarioContext } from "../../contexto/cadastroUsuario";
+import { useEffect } from "react";
 
 const opcoes = [
   {
@@ -33,7 +34,11 @@ const opcoes = [
 ];
 
 export const Interesses = () => {
-  const { usuario, setInteresse } = useCadastroUsuarioContext();
+  const { usuario, setInteresse, dadosSelecionados, navegar } =
+    useCadastroUsuarioContext();
+  useEffect(() => {
+    dadosSelecionados();
+  }, [navegar, dadosSelecionados]);
   return (
     <>
       <Tipografia variante="h1" componente="h1">
@@ -55,7 +60,7 @@ export const Interesses = () => {
         </Col>
         <Col lg={6} md={6} sm={6}>
           <div style={{ textAlign: "right" }}>
-            <Link to="/cadastro/dados-pessoais">
+            <Link to="/dados-pessoais">
               <Botao>Próxima</Botao>
             </Link>
           </div>

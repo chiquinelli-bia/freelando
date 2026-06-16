@@ -22,6 +22,8 @@ export const CadastroUsuarioContext = createContext({
   setSenha: () => null,
   setSenhaConfirmada: () => null,
   submeterForm: () => null,
+  dadosSelecionados: () => null,
+  navegar: () => null,
 });
 
 export const useCadastroUsuarioContext = () => {
@@ -99,7 +101,17 @@ export const CadastroUsuarioProvider = ({ children }) => {
   };
   const submeterForm = () => {
     console.log(usuario);
-    navegar("/cadastro/concluido");
+    navegar("/concluido");
+  };
+  const dadosSelecionados = () => {
+    if (!usuario.perfil) {
+      navegar("/");
+      return;
+    }
+    if (!usuario.interesse) {
+      navegar("/interesses");
+      return;
+    }
   };
   const contexto = {
     usuario,
@@ -112,6 +124,8 @@ export const CadastroUsuarioProvider = ({ children }) => {
     setSenha,
     setSenhaConfirmada,
     submeterForm,
+    dadosSelecionados,
+    navegar,
   };
   return (
     <CadastroUsuarioContext.Provider value={contexto}>
