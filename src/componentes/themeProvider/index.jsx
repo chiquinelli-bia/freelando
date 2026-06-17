@@ -2,22 +2,22 @@ import { ThemeProvider } from "@emotion/react";
 
 const tema = {
   cores: {
-    branco: "#ffffff",
+    branco: "#FFF",
     atencao: "",
     focus: "#B009FF",
     primarias: {
       a: "#5754ED",
       b: "#D93114",
-      c: "",
+      c: "#168070",
     },
     secundarias: {
-      a: "#EBEAF9",
-      b: "#F8F8FD",
-      c: "",
+      a: "#F8F8FD",
+      b: "#FDF8F8",
+      c: "#EBFCF9",
     },
     neutras: {
       a: "#373737",
-      b: "#E8E8E8",
+      b: "",
       c: "#F5F5F5",
       d: "",
     },
