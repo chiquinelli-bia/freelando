@@ -34,11 +34,11 @@ const opcoes = [
 ];
 
 export const Interesses = () => {
-  const { usuario, setInteresse, dadosSelecionados, navegar } =
+  const { usuario, setInteresse, dadosSelecionados } =
     useCadastroUsuarioContext();
   useEffect(() => {
     dadosSelecionados();
-  }, [navegar, dadosSelecionados]);
+  }, []);
   return (
     <>
       <Tipografia variante="h1" componente="h1">
