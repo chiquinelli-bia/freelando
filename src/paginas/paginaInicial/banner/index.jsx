@@ -3,6 +3,7 @@ import { Tipografia } from "../../../componentes/tipografia";
 import { Botao } from "../../../componentes/button";
 import imgBanner from "./banner.png";
 import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
 
 const ImgEstilizado = styled.img`
   max-width: 100%;
@@ -24,7 +25,9 @@ export const Banner = () => {
               Uma ponte entre os freelas mais talentosos e os projetos mais
               interessantes!
             </Tipografia>
-            <Botao variante="primaria">Quero me cadastrar!</Botao>
+            <Link to="/cadastro">
+              <Botao variante="primaria">Quero me cadastrar!</Botao>
+            </Link>
           </Col>
           <Col md={7} sm={12}>
             <ImgEstilizado src={imgBanner} alt="" />

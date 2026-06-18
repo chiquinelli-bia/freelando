@@ -101,15 +101,15 @@ export const CadastroUsuarioProvider = ({ children }) => {
   };
   const submeterForm = () => {
     console.log(usuario);
-    navegar("/concluido");
+    navegar("/cadastro/concluido");
   };
   const dadosSelecionados = () => {
     if (!usuario.perfil) {
-      navegar("/");
+      navegar("/cadastro");
       return;
     }
     if (!usuario.interesse) {
-      navegar("/interesses");
+      navegar("/cadastro/interesses");
       return;
     }
   };

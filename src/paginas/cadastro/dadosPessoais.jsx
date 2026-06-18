@@ -129,7 +129,7 @@ function DadosPessoais() {
           </Row>
           <Row>
             <Col lg={6} md={6} sm={6} style={{ textAlign: "left" }}>
-              <Link to="/interesses">
+              <Link to="/cadastro/interesses">
                 <Botao variante="secundaria">Anterior</Botao>
               </Link>
             </Col>

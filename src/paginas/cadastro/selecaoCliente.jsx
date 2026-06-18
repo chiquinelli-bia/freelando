@@ -18,7 +18,10 @@ export const SelecaoCliente = () => {
       </Tipografia>
       <Row>
         <Col md={6} sm={12}>
-          <RouterLink to="interesses" onClick={() => setPerfil("cliente")}>
+          <RouterLink
+            to="/cadastro/interesses"
+            onClick={() => setPerfil("cliente")}
+          >
             <img src={cliente} alt="" />
             <Tipografia variante="body" componente="body">
               Sou cliente e preciso de um freela!

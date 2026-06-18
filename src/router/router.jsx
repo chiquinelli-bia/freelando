@@ -5,6 +5,7 @@ import { SelecaoCliente } from "../paginas/cadastro/selecaoCliente";
 import { Interesses } from "../paginas/cadastro/interesses";
 import DadosPessoais from "../paginas/cadastro/dadosPessoais";
 import { Concluido } from "../paginas/cadastro/concluido";
+import { PaginaInicial } from "../paginas/paginaInicial";
 
 export const router = createBrowserRouter([
   {
@@ -13,6 +14,11 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "",
+        element: <PaginaInicial />,
+        children: [],
+      },
+      {
+        path: "cadastro",
         element: <LayoutBaseCadastro />,
         children: [
           {

@@ -60,7 +60,7 @@ export const Interesses = () => {
         </Col>
         <Col lg={6} md={6} sm={6}>
           <div style={{ textAlign: "right" }}>
-            <Link to="/dados-pessoais">
+            <Link to="/cadastro/dados-pessoais">
               <Botao>Próxima</Botao>
             </Link>
           </div>
