@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import { Card } from "../../componentes/card";
 import { CadastroUsuarioProvider } from "../../contexto/cadastroUsuario";
 
-export const LayoutBaseCadastro = () => {
+export const LayoutBaseCadastro = ({ children }) => {
   return (
     <CadastroUsuarioProvider>
       <Row justify="center" style={{ marginRight: "0" }}>
@@ -18,6 +18,7 @@ export const LayoutBaseCadastro = () => {
         >
           <Card>
             <Outlet />
+            {children}
           </Card>
         </Col>
       </Row>

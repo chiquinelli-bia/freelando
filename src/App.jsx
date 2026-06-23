@@ -7,7 +7,7 @@ function App() {
   return (
     <ProvedorTema>
       <Estilos />
-      <RouterProvider router={router} />;
+      <RouterProvider router={router} />
     </ProvedorTema>
   );
 }

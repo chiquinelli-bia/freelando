@@ -5,12 +5,14 @@ import { SelecaoCliente } from "../paginas/cadastro/selecaoCliente";
 import { Interesses } from "../paginas/cadastro/interesses";
 import DadosPessoais from "../paginas/cadastro/dadosPessoais";
 import { Concluido } from "../paginas/cadastro/concluido";
+import { Erro } from "../paginas/404";
 import { PaginaInicial } from "../paginas/paginaInicial";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <LayoutBase />,
+    ErrorBoundary: Erro,
     children: [
       {
         path: "",
