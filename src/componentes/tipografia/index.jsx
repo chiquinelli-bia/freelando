@@ -47,7 +47,7 @@ const estilos = {
     line-height: 24px;
     `,
   legenda: `
-        font-weight: 400;
+        font-weight: 600;
         font-size: 14px;
         line-height: 17px;
     `,

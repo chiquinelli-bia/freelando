@@ -13,7 +13,7 @@ const LinkPrimario = styled.a`
 `;
 const LinkSecundario = styled.a`
   cursor: pointer;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 16px;
   line-height: 20px;
   text-decoration: none;

@@ -1,3 +1,4 @@
+import axios from "axios";
 import { createContext, useContext } from "react";
 
 export const SessaoUsuarioContext = createContext({
@@ -10,10 +11,23 @@ export const SessaoUsuarioContext = createContext({
 export const useSessaoUsuarioContext = () => {
   return useContext(SessaoUsuarioContext);
 };
+const login = ({ email, senha }) => {
+  axios
+    .post("http://localhost:8080/auth/login", {
+      email,
+      senha,
+    })
+    .then((resposta) => console.log(resposta))
+    .catch((erro) => console.error(erro));
+};
 
-export const sessaoUsuarioProvider = ({ children }) => {
+const value = {
+  login,
+};
+
+export const SessaoUsuarioProvider = ({ children }) => {
   return (
-    <SessaoUsuarioContext.Provider value={contexto}>
+    <SessaoUsuarioContext.Provider value={value}>
       {children}
     </SessaoUsuarioContext.Provider>
   );
