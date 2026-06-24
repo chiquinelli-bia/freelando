@@ -8,6 +8,7 @@ import { Concluido } from "../paginas/cadastro/concluido";
 import { Erro } from "../paginas/404";
 import { PaginaInicial } from "../paginas/paginaInicial";
 import { Login } from "../paginas/login";
+import Perfil from "../paginas/areaLogada/perfil";
 
 export const router = createBrowserRouter([
   {
@@ -24,6 +25,16 @@ export const router = createBrowserRouter([
         path: "login",
         element: <Login />,
       },
+      {
+        path: "area-logada",
+        children: [
+          {
+            path: "perfil",
+            element: <Perfil />,
+          },
+        ],
+      },
+
       {
         path: "cadastro",
         element: <LayoutBaseCadastro />,
