@@ -1,9 +1,9 @@
-import axios from "axios";
 import { createContext, useContext } from "react";
+import http from "../componentes/http";
 
 export const SessaoUsuarioContext = createContext({
   UsuarioEstaLogado: false,
-  login: () => null,
+  login: (email, senha) => null,
   logout: () => null,
   perfil: {},
 });
@@ -11,9 +11,9 @@ export const SessaoUsuarioContext = createContext({
 export const useSessaoUsuarioContext = () => {
   return useContext(SessaoUsuarioContext);
 };
-const login = ({ email, senha }) => {
-  axios
-    .post("http://localhost:8080/auth/login", {
+const login = (email, senha) => {
+  http
+    .post("auth/login", {
       email,
       senha,
     })
