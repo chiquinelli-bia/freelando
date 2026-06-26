@@ -6,6 +6,8 @@ import { CampoTexto } from "../../../componentes/campoTexto";
 import { Botao } from "../../../componentes/button";
 import avatar from "../../../assets/avatar.png";
 import background from "../../../assets/perfil-bg.png";
+import { useEffect } from "react";
+import http from "../../../componentes/http";
 
 const TituloEstilizado = styled.h1`
   background: url(${background}) no-repeat;
@@ -23,6 +25,13 @@ const ImgEstilizada = styled.img`
 `;
 
 const Perfil = () => {
+  useEffect(() => {
+    http
+      .get("profile")
+      .then((resposta) => console.log(resposta.data))
+      .catch((erro) => console.error(erro));
+  }, []);
+
   const aoSubmeterForm = (evento) => {
     evento.preventDefault();
   };
