@@ -19,7 +19,7 @@ const login = (email, senha) => {
       senha,
     })
     .then((resposta) => {
-      armazenadorToken.definirTokens(
+      armazenadorToken.definirToken(
         resposta.data.access_token,
         resposta.data.refresh_token,
       );
