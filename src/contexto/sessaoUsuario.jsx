@@ -13,18 +13,16 @@ export const useSessaoUsuarioContext = () => {
   return useContext(SessaoUsuarioContext);
 };
 const login = (email, senha) => {
-  http
+  return http
     .post("auth/login", {
       email,
       senha,
     })
     .then((resposta) => {
-      armazenadorToken.definirToken(
-        resposta.data.access_token,
-        resposta.data.refresh_token,
-      );
-    })
-    .catch((erro) => console.error(erro));
+      armazenadorToken
+        .definirToken(resposta.data.access_token, resposta.data.refresh_token)
+        .catch((erro) => console.error(erro));
+    });
 };
 
 const value = {
