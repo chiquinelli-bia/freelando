@@ -23,9 +23,17 @@ const LinkSecundario = styled.span`
     border-bottom: 1px solid ${(props) => props.theme.cores.primarias.b};
   }
 `;
-export const Link = ({ children, variante = "primario" }) => {
+export const Link = ({ children, variante = "primario", onClick = null }) => {
   if (variante === "primario") {
-    return <LinkPrimario variante={variante}>{children}</LinkPrimario>;
+    return (
+      <LinkPrimario variante={variante} onClick={onClick}>
+        {children}
+      </LinkPrimario>
+    );
   }
-  return <LinkSecundario variante={variante}>{children}</LinkSecundario>;
+  return (
+    <LinkSecundario variante={variante} onClick={onClick}>
+      {children}
+    </LinkSecundario>
+  );
 };
